@@ -1,53 +1,30 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  	<title>CSS Button Dropdown Menu</title>
+  	<title>CSS Jquery Button Dropdown Menu Plugin</title>
   	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8">
   	<link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
     
-    <div id="container"></div>
+    <div id="sfdc"></div>
     
-    <div class="button">
-      <img src="images/actions.png" width="27" height="16" />
-      
-      <div class="dropdown">
-        <ul class="dropdown-list">
-          <li class="">
-            <a href="#">
-              <span class="ellipsis">my link 1 my link 1 my link 1</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="#">
-              <span class="ellipsis">my link 2</span>
-            </a>
-          </li>
-        <ul>
-      </ul></ul></div>
-      
-    </div>
+    <div class="button"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.js" charset="utf-8"></script>
   	<script type="text/javascript" src="js/jquery.js"></script>
   	<script type="text/javascript">
   	  
   		$().ready(function() {
-  		  
-  		   $('.button').click(function() {
-          $('.dropdown').toggleClass('active');
-         });
-        
-         $('#container').mouseup(function() {
-           $('.dropdown').removeClass('active');
-         });
-       
-         $('.dropdown-list li').hover(function() {
-           $(this).addClass('link');
-         }, function() {
-           $(this).removeClass('link');
-         });
+         
+       $(".button").dropDownButton({
+           mouseupElement: [{atrType: 'id', atrName: 'sfdc'}],
+           buttonImg: [{src: 'images/actions.png', width: 27, height: 16}],
+           links: [{title: 'Google', url: 'http://www.google.com'},{title: 'Yahoo', url: 'http://www.yahoo.com'},{title: 'My Long Link My Long Link My Long Link My Long Link', url: '#'}],
+   		     buttonPadding: [{top: 3, right: 15, bottom: 3, left: 15}],
+           right: 20,
+           top:10
+       });
          
   	  });
   	</script>
