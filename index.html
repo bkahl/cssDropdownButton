@@ -7,20 +7,20 @@
 
   <body>
     
-    <div id="sfdc"></div>
+    <div id="container"></div>
     
     <div class="button"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.js" charset="utf-8"></script>
-  	<script type="text/javascript" src="js/jquery.js"></script>
+  	<script type="text/javascript" src="js/jquery.cssDropDownButton.js"></script>
   	<script type="text/javascript">
   	  
   		$().ready(function() {
          
        $(".button").dropDownButton({
-           mouseupElement: [{atrType: 'id', atrName: 'sfdc'}],
+           hideDropDownOnMouseUp: [{attr: 'id', name: 'container'}],
            buttonImg: [{src: 'images/actions.png', width: 27, height: 16}],
-           links: [{title: 'Google', url: 'http://www.google.com'},{title: 'Yahoo', url: 'http://www.yahoo.com'},{title: 'My Long Link My Long Link My Long Link My Long Link', url: '#'}],
+           links: [{title: 'Google', url: 'http://www.google.com'},{title: 'Yahoo', url: 'http://www.yahoo.com'}, {title: 'Austins GREAT', url: 'http://www.yahoo.com'} ,{title: 'My Long Link My Long Link My Long Link My Long Link', url: '#'}],
    		     buttonPadding: [{top: 3, right: 15, bottom: 3, left: 15}],
            right: 20,
            top:10

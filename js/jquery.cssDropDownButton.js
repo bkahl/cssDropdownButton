@@ -17,8 +17,8 @@ function dropDownButton(id, data){
    $('.dropdown').toggleClass('active');
   });
  
-  if(data.mouseupElement[0].atrType === 'id') mUpelement ='#'+data.mouseupElement[0].atrName;
-  else mUpelement = '.'+data.mouseupElement[0].atrName;
+  if(data.hideDropDownOnMouseUp[0].attr === 'id') mUpelement ='#'+data.hideDropDownOnMouseUp[0].name;
+  else mUpelement = '.'+data.hideDropDownOnMouseUp[0].name;
   
   $(mUpelement).mouseup(function() {
     $('.dropdown').removeClass('active');
@@ -71,7 +71,7 @@ function dropDownButton(id, data){
 		var id	= $(this), opts;
 
 		$.fn.dropDownButton.defaults = {
-   		mouseupElement: [{atrType: 'id', atrName: 'container'}],
+   		hideDropDownOnMouseUp: [{attr: 'id', name: 'container'}],
    		buttonImg: [{src: 'images/actions.png', width: 27, height: 16}],
    		links: [{title: 'Google', url: 'http://www.google.com'},{title: 'Yahoo', url: 'http://www.yahoo.com'}],
    		buttonPadding: [{top: 3, right: 15, bottom: 3, left: 15}],
